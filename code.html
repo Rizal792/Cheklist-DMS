@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ceklist Monitoring DMS pada Unit Bus - 60 Unit</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #212121;
+    padding: 24px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #1a237e;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(26,35,126,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+  }
+  th {
+    background: #3f51b5;
+    color: white;
+    font-weight: 600;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  .checkbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .unit-label {
+    font-weight: 600;
+    color: #283593;
+  }
+  .section-header {
+    background: #c5cae9;
+    color: #1a237e;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+</style>
+</head>
+<body>
+  <h1>Ceklist Monitoring DMS (Driver Monitoring System) <br />Unit Bus - 60 Unit</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Unit Bus</th>
+        <th>Fungsi Kamera DMS</th>
+        <th>Status Tampilan</th>
+        <th>Peringatan Keletihan Pengemudi</th>
+        <th>Koneksi Sistem</th>
+        <th>Catatan / Temuan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Generate rows for 60 units -->
+      <!-- Each row includes checkbox inputs for each monitoring item -->
+      <!-- Units numbered from 1 to 60 -->
+      <!-- Columns for: Kamera, Tampilan, Peringatan, Koneksi, Catatan -->
+      <!-- Catatan will be left blank for manual input -->
+      <!-- Checkbox inputs for monitoring fields to mark OK / Not OK -->
+
+      <!-- JavaScript or server side normally generate this, here replicate manually for demo -->
+
+      <!-- Example row format:
+      <tr>
+        <td class="unit-label">Unit 1</td>
+        <td class="checkbox-center"><input type="checkbox" name="unit1_kamera" /></td>
+        <td class="checkbox-center"><input type="checkbox" name="unit1_tampilan" /></td>
+        <td class="checkbox-center"><input type="checkbox" name="unit1_peringatan" /></td>
+        <td class="checkbox-center"><input type="checkbox" name="unit1_koneksi" /></td>
+        <td contenteditable="true" style="text-align:left;"></td>
+      </tr>
+      
+      -->
+
+      <!-- Rows 1 to 60 -->
+      
+      <!-- Below is generated rows for all 60 units -->
+      <!-- For brevity, generated with minimal formatting -->
+
+      <!-- Start generating rows -->
+      <!-- Will place all 60 rows here -->
+      
+      <!-- Rows 1 to 60 -->
+      <!-- Using JavaScript template string generation format for readability -->
+    </tbody>
+  </table>
+
+  <script>
+    const tbody = document.querySelector('tbody');
+    for (let i = 1; i <= 60; i++) {
+      const tr = document.createElement('tr');
+
+      tr.innerHTML = `
+        <td class="unit-label">Unit ${i}</td>
+        <td class="checkbox-center"><input type="checkbox" name="unit${i}_kamera" aria-label="Fungsi Kamera DMS Unit ${i}"/></td>
+        <td class="checkbox-center"><input type="checkbox" name="unit${i}_tampilan" aria-label="Status Tampilan Unit ${i}"/></td>
+        <td class="checkbox-center"><input type="checkbox" name="unit${i}_peringatan" aria-label="Peringatan Keletihan Pengemudi Unit ${i}"/></td>
+        <td class="checkbox-center"><input type="checkbox" name="unit${i}_koneksi" aria-label="Koneksi Sistem Unit ${i}"/></td>
+        <td contenteditable="true" style="text-align:left;" aria-label="Catatan atau Temuan Unit ${i}"></td>
+      `;
+      tbody.appendChild(tr);
+    }
+  </script>
+
+</body>
+</html>
+
